@@ -87,7 +87,7 @@ SearchInfo(AssignPage, ClassAssingNum);
 
 //配列に分ける
     function SetNames() {
-        console.log("Setname count   "+setnameCount)
+        // console.log("Setname count   "+setnameCount)
         for (let i = callNum*4; i < ALLofThem.length; i=i+4) {
             if (ALLofThem[i] !== undefined && ALLofThem[i] !== null) {
                 AssignNames[i / 4] = ALLofThem[i];
@@ -98,10 +98,9 @@ SearchInfo(AssignPage, ClassAssingNum);
         if (ALLofThem[i] !== undefined && ALLofThem[1+i] !== null) {
                 AssignStates[i / 4]=ALLofThem[1+i];
         }
-        console.log("Assing is" + i/4+ "    " + AssignNames[i/4]);
-        console.log("Assing is" + i/4+ "    " + AssignDeadLine[i / 4]);
-        console.log("Assing is" + i/4+ "    " + AssignStates[i / 4]);
-        console.log("")
+        // console.log("Assing is" + i/4+ "    " + AssignNames[i/4]);
+        // console.log("Assing is" + i/4+ "    " + AssignDeadLine[i / 4]);
+        // console.log("Assing is" + i/4+ "    " + AssignStates[i / 4]);
         // callNum++;
             }
         setnameCount++;
@@ -125,20 +124,13 @@ SearchInfo(AssignPage, ClassAssingNum);
         }  
     }
 
-
-
 function judgeAssignStates(num) {
     unSubmitted[8] = [];//配列を作成
     // console.log(num)
     for (let i = 0; i < AssignStates.length; i++) {
-        // let firstChild = document.body.firstChild;
-        // let brNode1 = document.createElement("br");
         if (AssignStates[i] !== undefined && AssignStates[i].includes("未提出")) {
             unSubmitted[unsubCount][0] = AssignNames[i];
             unSubmitted[unsubCount][1] = AssignDeadLine[i];
-            // console.log(unsubCount)
-            // console.log(unSubmitted[unsubCount][0])
-            // console.log(unSubmitted[unsubCount][1])
             unsubCount++;
         } 
     }  
@@ -181,10 +173,6 @@ function getAssignInfo(classAssignNum) {//②レポートページをとって�
 
     SetNames(AssignNames, ALLofThem);
 
-    // // SetDeadLines();//締め切り取得
-    // // SetAssignStates();//未提出かどうか
-
-    // judgeAssignStates(classAssignNum)
     })
     .catch(error => console.log("Fetch error:", error));
 
