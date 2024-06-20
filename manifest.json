@@ -4,30 +4,13 @@
   "version": "0.1",
   "manifest_version": 3,
   "content_scripts": [
-    {
-      "matches": ["https://tabelog.com/*"],
-      "js": ["content_script.js"]
-    },
-  {
-    "matches": ["https://outlook.office.com/mail/*"],
-    "css": ["mystyle.css"]
-  },
   {
     "matches": ["https://ct.ritsumei.ac.jp/ct/home_course"],
     "css": ["mystyle.css"]
   },
   {
     "matches": ["https://ct.ritsumei.ac.jp/ct/home_course"],
-    "js": ["content_script.js"]
-  },
-  {
-    "matches": ["https://ct.ritsumei.ac.jp/ct/home_course"],
-    "js": ["extrict.js"]
-  },
-
-  {
-    "matches": ["https://ct.ritsumei.ac.jp/ct/course_8317295_report"],
-    "js": ["extrict2.js"]
+    "js": ["test_script.js"]
   }
   ]
 }
