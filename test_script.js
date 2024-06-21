@@ -25,7 +25,7 @@ function SearchInfo(name, List) {
     console.log(countClass);
     for (let i = 0; i < List.length; i++) {
         if (List[i] != null) {
-            console.log(List[i]);
+            // console.log(List[i]);
         }
     }
     let separator = document.createElement("div");
@@ -129,6 +129,7 @@ function TableDisplay() {
     headers.forEach(function(header) {
         var th = document.createElement('th');
         th.textContent = header;
+        th.style.textAlign = 'center';
         headerRow.appendChild(th);
     });
     
@@ -166,9 +167,9 @@ function TableDisplay() {
             border-collapse: collapse;
         }
         th, td {
-            border: 1px solid black;
+            border: 0.5px solid black;
             padding: 8px;
-            text-align: left;
+            font-size: 12px;
         }
         th {
             background-color: rgba(255, 255, 0, 0.5);
